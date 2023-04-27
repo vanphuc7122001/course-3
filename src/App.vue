@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <the-header></the-header>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <the-side-bar></the-side-bar>
+      <!-- partial -->
+      <main class="main-panel">
+        <the-dashboard></the-dashboard>
+        <!-- content-wrapper ends -->
+        <!-- partial -->
+      </main>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TheHeader from "./components/TheHeader.vue";
+import TheSideBar from "./components/TheSideBar.vue";
+import TheDashboard from "./components/TheDashboard.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TheHeader,
+    TheSideBar,
+    TheDashboard,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>
